@@ -1,5 +1,5 @@
 const { faker } = require("@faker-js/faker");
-const random = require("./randomAge");
+const random = require("./randomValue");
 
 const newPerson = (arr) => {
   const personObj = {};

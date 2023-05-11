@@ -1,5 +1,5 @@
 const express = require("express");
-const random = require("./appLogics/randomAge");
+const random = require("./appLogics/randomValue");
 const stringObj = require("./appLogics/stringCount");
 const newPerson = require("./appLogics/newPersonObj");
 const app = express();
@@ -13,7 +13,7 @@ app.get("/random", (req, res) => {
   const end = +req.query.end;
 
   res.json({
-    randomAge: random(start, end),
+    randomValue: random(start, end),
   });
 });
 
