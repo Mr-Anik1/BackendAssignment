@@ -1,6 +1,7 @@
 const express = require("express");
-const randomAge = require("./appLogics/randomAge");
-const stringCount = require("./appLogics/stringCount");
+const random = require("./appLogics/randomAge");
+const stringObj = require("./appLogics/stringCount");
+const newPerson = require("./appLogics/newPersonObj");
 const app = express();
 
 /**
@@ -12,7 +13,22 @@ app.get("/random", (req, res) => {
   const end = +req.query.end;
 
   res.json({
-    randomAge: randomAge(start, end),
+    randomAge: random(start, end),
+  });
+});
+
+/**
+ * @Problem_2_API_Logic
+ * Test1: http://localhost:4000/person?arr=["firstName","lastName","email","avatar","age","address"]
+ *
+ * Test2: http://localhost:4000/person?arr=["firstName","email","age","address"]
+ *
+ */
+app.get("/person", (req, res) => {
+  const personArr = JSON.parse(req.query.arr);
+
+  res.json({
+    personobj: newPerson(personArr),
   });
 });
 
@@ -24,7 +40,7 @@ app.get("/stringcount", (req, res) => {
   const inputString = req.query.str;
 
   res.json({
-    stringObj: stringCount(inputString),
+    stringObj: stringObj(inputString),
   });
 });
 
