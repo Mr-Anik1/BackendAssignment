@@ -1,5 +1,5 @@
 const { faker } = require("@faker-js/faker");
-const randomAge = require("./randomAge");
+const random = require("./randomAge");
 
 const newPerson = (arr) => {
   const personObj = {};
@@ -23,7 +23,7 @@ const newPerson = (arr) => {
       } else if (prop === "avatar") {
         personObj[prop] = faker.image.avatar();
       } else if (prop === "age") {
-        personObj[prop] = randomAge(13, 70);
+        personObj[prop] = random(13, 70);
       } else if (prop === "address") {
         personObj[prop] = faker.address.streetAddress();
       }
