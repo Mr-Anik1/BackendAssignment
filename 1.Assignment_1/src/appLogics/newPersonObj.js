@@ -1,5 +1,4 @@
 const { faker } = require("@faker-js/faker");
-const random = require("./randomValue");
 
 const newPerson = (arr) => {
   const personObj = {};
@@ -23,9 +22,11 @@ const newPerson = (arr) => {
       } else if (prop === "avatar") {
         personObj[prop] = faker.image.avatar();
       } else if (prop === "age") {
-        personObj[prop] = random(13, 70);
+        personObj[prop] = faker.datatype.number({ min: 13, max: 70 });
       } else if (prop === "address") {
-        personObj[prop] = faker.address.streetAddress();
+        personObj[
+          prop
+        ] = `${faker.address.streetAddress()}, ${faker.address.city()}, ${faker.address.country()}`;
       }
     }
   });

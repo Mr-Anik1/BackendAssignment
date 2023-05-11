@@ -29,7 +29,7 @@ We have a function that can generate a fake person profile including first name,
 - ### Output [Person Object](https://github.com/Mr-Anik1/BackendAssignment/blob/master/1.Assignment_1/src/appLogics/newPersonObj.js)
 
 **Output-1**
-![person_object](./testImage/2.1.peson.png)
+![person_object](./testImage/2.1.person.png)
 
 **Output-2**
 ![person_object](./testImage/2.2.person.png)
