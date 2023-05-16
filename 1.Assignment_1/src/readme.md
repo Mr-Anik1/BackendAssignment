@@ -16,6 +16,10 @@ We have a function that can take two arguments called start and end. Both argume
 
 ## Solution:
 
+```
+http://localhost:4000/random?start=30&end=50
+```
+
 - ### Output [Random Value](https://github.com/Mr-Anik1/BackendAssignment/blob/master/1.Assignment_1/src/appLogics/randomValue.js)
 
 ![random_value](./testImage/1.randomValue.png)
@@ -29,9 +33,19 @@ We have a function that can generate a fake person profile including first name,
 - ### Output [Person Object](https://github.com/Mr-Anik1/BackendAssignment/blob/master/1.Assignment_1/src/appLogics/newPersonObj.js)
 
 **Output-1**
+
+```
+http://localhost:4000/person?arr=["firstName","lastName","email","avatar","age","address"]
+```
+
 ![person_object](./testImage/2.1.person.png)
 
 **Output-2**
+
+```
+http://localhost:4000/person?arr=["firstName","email","age","address"]
+```
+
 ![person_object](./testImage/2.2.person.png)
 
 ## Problem-3
@@ -39,6 +53,10 @@ We have a function that can generate a fake person profile including first name,
 We have a function that can accept a string as an argument and return an object containing the number of letters, number of symbols and number of numeric characters.
 
 ## Solution:
+
+```
+http://localhost:4000/stringcount?str=stack*learner[!]2017to2023^
+```
 
 - ### Output [String Object](https://github.com/Mr-Anik1/BackendAssignment/blob/master/1.Assignment_1/src/appLogics/stringCount.js)
 
