@@ -14,19 +14,19 @@ const newPerson = (arr) => {
   arr.forEach((prop) => {
     if (properties.includes(prop)) {
       if (prop === "firstName") {
-        personObj[prop] = faker.name.firstName();
+        personObj[prop] = faker.person.firstName();
       } else if (prop === "lastName") {
-        personObj[prop] = faker.name.lastName();
+        personObj[prop] = faker.person.lastName();
       } else if (prop === "email") {
         personObj[prop] = faker.internet.email();
       } else if (prop === "avatar") {
         personObj[prop] = faker.image.avatar();
       } else if (prop === "age") {
-        personObj[prop] = faker.datatype.number({ min: 13, max: 70 });
+        personObj[prop] = faker.number.int({ min: 13, max: 70 });
       } else if (prop === "address") {
         personObj[
           prop
-        ] = `${faker.address.streetAddress()}, ${faker.address.city()}, ${faker.address.country()}`;
+        ] = `${faker.location.streetAddress()}, ${faker.location.city()}, ${faker.location.country()}`;
       }
     }
   });
