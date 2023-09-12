@@ -12,6 +12,9 @@ applyMiddleware(app);
 
 // Router
 app.use(routes.authRouter);
+app.use(routes.bookRouter);
+app.use(routes.userRouter);
+app.use(routes.transactionRouter);
 // Error Handler
 app.use(errorMiddleware.notFoundHandler);
 app.use(errorMiddleware.globalErrorHandler);
