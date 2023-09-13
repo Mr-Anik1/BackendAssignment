@@ -3,7 +3,24 @@ const { StatusCodes } = require("http-status-codes");
 const { authServicesV1 } = require("../../../../lib/v1/authentication");
 
 const login = asyncHandler(async (req, res) => {
-  res.status(StatusCodes.OK).json({ msg: await authServicesV1.login() });
+  const { email, password } = req.body;
+
+  // Generate Token
+  const token = await authServicesV1.login({ email, password });
+
+  // Generate Response
+  const response = {
+    code: StatusCodes.OK,
+    message: "Login successful",
+    data: {
+      access_token: token,
+    },
+    links: {
+      self: req.url,
+    },
+  };
+
+  res.status(StatusCodes.OK).json(response);
 });
 
 module.exports = { login };

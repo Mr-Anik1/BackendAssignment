@@ -39,7 +39,7 @@ const globalErrorHandler = (err, req, res, next) => {
   res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
     code: StatusCodes.INTERNAL_SERVER_ERROR,
     error: `Internal Server Error`,
-    message: `We are sorry for inconvience. Please try again later.`,
+    message: `Server error. Please try again later.`,
   });
 };
 
