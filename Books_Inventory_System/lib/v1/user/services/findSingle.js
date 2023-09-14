@@ -19,7 +19,7 @@ const findSingle = async ({ id }) => {
     return user;
   } catch (err) {
     if (err.message) {
-      console.log(`ERROR: ${err.message}`);
+      console.log(`[FIND_SINGLE_USER] ${err.message}`);
     }
 
     throw new errors.NotFoundError(`Requested resource not found`);

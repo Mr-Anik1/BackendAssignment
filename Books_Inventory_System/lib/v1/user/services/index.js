@@ -6,7 +6,7 @@ const { remove } = require("./remove");
 const { update } = require("./update");
 const { count } = require("./count");
 const { findUserByEmail, findUserById, userExist } = require("./checkUser");
-const { checkOwnership } = require("./checkOwnership");
+const { checkUserOwnership } = require("./checkUserOwnership");
 
 // All user services have been exported.
 module.exports = {
@@ -19,5 +19,5 @@ module.exports = {
   findUserByEmail,
   findUserById,
   userExist,
-  checkOwnership,
+  checkUserOwnership,
 };

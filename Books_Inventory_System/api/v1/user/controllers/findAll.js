@@ -38,8 +38,16 @@ const findAll = asyncHandler(async (req, res) => {
     hasPrev: !!pagination.prev,
   });
 
-  // Response final result
-  res.status(StatusCodes.OK).json({ data: users, pagination, links });
+  // Generate Response
+  const response = {
+    code: StatusCodes.OK,
+    message: "Users retrieved successfully",
+    data: users,
+    pagination,
+    links,
+  };
+
+  res.status(StatusCodes.OK).json(response);
 });
 
 module.exports = { findAll };

@@ -2,6 +2,14 @@ const { Schema, model } = require("mongoose");
 
 const transactionSchema = new Schema(
   {
+    action: {
+      type: String,
+      enum: {
+        values: ["purchase", "borrow"],
+        message: "{VALUE} is not supported",
+      },
+      required: [true, "Please specify an action (purchase or borrow)"],
+    },
     bookId: {
       type: Schema.Types.ObjectId,
       ref: "Book",
@@ -11,14 +19,6 @@ const transactionSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "User",
       required: true,
-    },
-    action: {
-      type: String,
-      enum: {
-        values: ["purchase", "borrow"],
-        message: "{VALUE} is not supported",
-      },
-      required: [true, "Please specify an action (purchase or borrow)"],
     },
     transactionDate: {
       type: Date,

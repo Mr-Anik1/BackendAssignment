@@ -1,7 +1,7 @@
-// All authentication and authorization middleware has been imported
+// All authentication and authorization middlewares have been imported
 const { authenticate } = require("./authenticate");
 const { authorize } = require("./authorize");
-const { ownership } = require("./ownership");
+const { userOwnership } = require("./userOwnership");
 
-// All authentication and authorization middleware has been exported
-module.exports = { authenticate, authorize, ownership };
+// All authentication and authorization middleware have been exported
+module.exports = { authenticate, authorize, userOwnership };

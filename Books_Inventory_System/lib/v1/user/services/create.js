@@ -34,7 +34,7 @@ const create = async ({
     return user;
   } catch (err) {
     if (err.message) {
-      console.log(`ERROR: ${err.message}`);
+      console.log(`[CREATE_USER]: ${err.message}`);
     }
 
     throw new errors.InternalServerError(`User Creation Failed`);

@@ -21,7 +21,7 @@ const remove = async ({ id }) => {
     return { delCode: 204 };
   } catch (err) {
     if (err.message) {
-      console.log(`ERROR: ${err.message}`);
+      console.log(`[REMOVE_USER] ${err.message}`);
     }
 
     // If error is instance of NotFoundError

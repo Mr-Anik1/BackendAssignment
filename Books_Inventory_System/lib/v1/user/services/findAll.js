@@ -32,7 +32,7 @@ const findAll = async ({
     return users;
   } catch (err) {
     if (err.message) {
-      console.log(`ERROR: ${err.message}`);
+      console.log(`[FIND_ALL_USER] ${err.message}`);
     }
 
     throw new errors.NotFoundError(
