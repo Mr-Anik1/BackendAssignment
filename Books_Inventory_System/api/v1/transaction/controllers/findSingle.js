@@ -3,9 +3,22 @@ const { StatusCodes } = require("http-status-codes");
 const { transactionServicesV1 } = require("../../../../lib/v1/transaction");
 
 const findSingle = asyncHandler(async (req, res) => {
-  res
-    .status(StatusCodes.OK)
-    .json({ msg: await transactionServicesV1.findSingle() });
+  const id = req.params.id;
+
+  // Retrive singel transaction
+  const transaction = await transactionServicesV1.findSingle({ id });
+
+  // Generate Response
+  const response = {
+    code: StatusCodes.OK,
+    message: "Transaction retrieved successfully",
+    data: transaction,
+    links: {
+      self: req.url,
+    },
+  };
+
+  res.status(StatusCodes.OK).json(response);
 });
 
 module.exports = { findSingle };

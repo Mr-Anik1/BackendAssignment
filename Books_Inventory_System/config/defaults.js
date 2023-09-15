@@ -5,6 +5,8 @@ const config = {
   sortType: "dsc",
   sortBy: "updatedAt",
   search: "",
+  userId: "",
+  bookId: "",
   totalItems: 0,
   // JWT
   secret: process.env.ACCESS_TOKEN_SECRET,
