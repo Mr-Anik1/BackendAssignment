@@ -21,7 +21,7 @@ const checkUserOwnership = async ({ resourceId, userId, role }) => {
       throw new errors.NotFoundError(`Resource doesn't exist`);
     }
 
-    // If user id is match to userId then return true
+    // If the user Id matches the requested user Id, then return true
     if (user.id === userId) {
       return true;
     }

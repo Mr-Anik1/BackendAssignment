@@ -21,7 +21,7 @@ const checkTransactionOwnership = async ({ resourceId, userId, role }) => {
       throw Error;
     }
 
-    // If userId which is inside the transaction is match to requested userId
+    // If the userId that is inside the transaction matches the requested userId
     if (transaction.userId.toString() === userId) {
       return true;
     }

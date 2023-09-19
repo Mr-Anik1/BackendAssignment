@@ -27,7 +27,8 @@ userRouter
   )
   .delete(
     authMiddleware.authenticate,
-    authMiddleware.authorize({ roles: ["admin"] }),
+    authMiddleware.authorize({ roles: ["admin", "librarian", "regular"] }),
+    authMiddleware.userOwnership({ model: "User" }),
     userControllersV1.remove
   );
 

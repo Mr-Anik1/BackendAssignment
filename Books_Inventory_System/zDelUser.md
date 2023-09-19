@@ -20,9 +20,7 @@
 "address": "123 Main St, Sanghi, China"
 }
 
-<!-- REGULAR USER -->
-
-# Approved
+<!-- REGULAR USER ~ Approved -->
 
 "id": "65028918e1867412adb4a1cb",
 {
@@ -34,7 +32,7 @@
 "address": "Mirpur,Dhaka,Bangladesh"
 }
 
-# Pending
+<!-- Pending -->
 
 "id": "650294e026ae7f429238def5"
 {
